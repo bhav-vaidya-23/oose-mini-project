@@ -1,0 +1,212 @@
+:root {
+  --bg: #f3f7fb;
+  --surface: #ffffff;
+  --surface-soft: #f8fbfe;
+  --border: #d9e3ed;
+  --border-soft: #e6edf4;
+  --text: #102d4e;
+  --text-muted: #61748c;
+  --text-faint: #8b9bad;
+  --amber: #ef8b24;
+  --amber-soft: #fff1dd;
+  --red: #db5849;
+  --red-soft: #fff0ed;
+  --deep-red: #b72f46;
+  --deep-red-soft: #ffe9ed;
+  --cyan: #0b93bd;
+  --cyan-soft: #e8f7fc;
+  --green: #32a36c;
+  --green-soft: #e8f7ef;
+  --font-display: Inter, "Segoe UI", system-ui, sans-serif;
+  --font-body: Inter, "Segoe UI", system-ui, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, monospace;
+  --radius-sm: 9px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --shadow-soft: 0 10px 28px rgba(21, 53, 83, .055);
+  --shadow-panel: 0 14px 40px rgba(21, 53, 83, .075);
+  --max-width: 1400px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body, #root { margin: 0; min-height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: var(--font-body); -webkit-font-smoothing: antialiased; line-height: 1.5; }
+button, input, select { font: inherit; color: inherit; }
+h1,h2,h3,h4 { font-family: var(--font-display); margin: 0; letter-spacing: -.025em; }
+p { margin: 0; }
+button { cursor: pointer; }
+::selection { background: rgba(239,139,36,.2); }
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+.panel { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); }
+.section-title { font-size: 1rem; color: var(--text); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+.app[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #101b28;
+  --surface: #172637;
+  --surface-soft: #1d3043;
+  --border: #34485d;
+  --border-soft: #293d51;
+  --text: #e5edf5;
+  --text-muted: #b0bfd0;
+  --text-faint: #8fa2b7;
+  --amber: #f1a84f;
+  --amber-soft: #3b3022;
+  --red: #ed8175;
+  --red-soft: #3a292b;
+  --deep-red: #e77c91;
+  --deep-red-soft: #39242c;
+  --cyan: #55bddb;
+  --cyan-soft: #193546;
+  --green: #62c58d;
+  --green-soft: #1c382f;
+  --shadow-soft: 0 10px 28px rgba(0, 0, 0, .18);
+  --shadow-panel: 0 14px 40px rgba(0, 0, 0, .24);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app[data-theme="dark"] .app-header {
+  background: rgba(15, 27, 40, .88);
+  border-color: var(--border-soft);
+}
+
+.app[data-theme="dark"] .app-header__mark,
+.app[data-theme="dark"] .app-header__detail-pill,
+.app[data-theme="dark"] .app-header__icon-btn,
+.app[data-theme="dark"] .app-header__nav-item:hover,
+.app[data-theme="dark"] .app-header__nav-item.is-active {
+  background: var(--surface-soft);
+  border-color: var(--border);
+}
+
+.app[data-theme="dark"] .control-bar {
+  background: rgba(15, 27, 40, .58);
+  border-color: var(--border-soft);
+}
+
+.app[data-theme="dark"] .control-bar select,
+.app[data-theme="dark"] .control-bar input {
+  background: rgba(23, 38, 55, .9);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.app[data-theme="dark"] .control-bar select option {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.app[data-theme="dark"] .daily-strip__title,
+.app[data-theme="dark"] .history-period,
+.app[data-theme="dark"] .history-tabs,
+.app[data-theme="dark"] .weather-trend__tabs {
+  background: var(--surface-soft);
+}
+
+.app[data-theme="dark"] .daily-item.is-selected,
+.app[data-theme="dark"] .highlight-grid__risk {
+  background: rgba(239, 139, 36, .12);
+}
+
+.app[data-theme="dark"] .hourly__item.is-current {
+  background: rgba(239, 139, 36, .12);
+}
+
+.app[data-theme="dark"] .current-weather {
+  background: linear-gradient(135deg, #172637 0%, #1a2a3a 70%, #1a3040 100%);
+}
+
+.app[data-theme="dark"] .current-weather__icon-wrap {
+  background: linear-gradient(145deg, #3a3024, #1c3440);
+}
+
+.app[data-theme="dark"] .metric,
+.app[data-theme="dark"] .prediction__headline,
+.app[data-theme="dark"] .prediction__stat {
+  background: rgba(12, 25, 38, .55);
+}
+
+.app[data-theme="dark"] .prediction--high,
+.app[data-theme="dark"] .prediction--extreme,
+.app[data-theme="dark"] .prediction--moderate {
+  background: linear-gradient(145deg, #282a30, #172637 78%);
+  border-color: var(--border-soft);
+}
+
+.app[data-theme="dark"] .alerts__item,
+.app[data-theme="dark"] .alerts__item--extreme {
+  background: #302629;
+  border-color: #584044;
+}
+
+.app[data-theme="dark"] .model-info__result,
+.app[data-theme="dark"] .model-info__reason,
+.app[data-theme="dark"] .model-info__result-row,
+.app[data-theme="dark"] .model-info__param-card,
+.app[data-theme="dark"] .model-info__step {
+  background: var(--surface-soft);
+}
+
+.app[data-theme="dark"] .model-info__result {
+  background: linear-gradient(135deg, #1c2d3e, #302b24);
+}
+
+.app[data-theme="dark"] .model-info__reason-list span {
+  background: #233548;
+}
+
+.app[data-theme="dark"] .model-info__step--final {
+  background: #332b27;
+  border-color: #594438;
+}
+
+.app[data-theme="dark"] .model-info__severity--high,
+.app[data-theme="dark"] .model-info__severity--extreme,
+.app[data-theme="dark"] .model-info__severity--moderate,
+.app[data-theme="dark"] .model-info__severity--low,
+.app[data-theme="dark"] .model-info__severity--safe {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.app[data-theme="dark"] .history-period button.is-active,
+.app[data-theme="dark"] .history-tabs button.is-active,
+.app[data-theme="dark"] .weather-trend__tab.is-active {
+  background: #31475b;
+  color: var(--text);
+}
+
+.app[data-theme="dark"] .trend-tooltip,
+.app[data-theme="dark"] .historic-tooltip,
+.app[data-theme="dark"] .recharts-tooltip-wrapper > div {
+  background: #172637 !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+.app[data-theme="dark"] .recharts-tooltip-wrapper,
+.app[data-theme="dark"] .trend-tooltip__value,
+.app[data-theme="dark"] .historic-tooltip span,
+.app[data-theme="dark"] .historic-tooltip strong {
+  color: var(--text);
+}
+
+.app[data-theme="dark"] .recharts-cartesian-axis-tick-value {
+  fill: var(--text-muted);
+}
+
+.app[data-theme="dark"] .recharts-cartesian-grid line,
+.app[data-theme="dark"] .recharts-cartesian-axis-line {
+  stroke: var(--border);
+}
+
+.app[data-theme="dark"] .leaflet-control-zoom a,
+.app[data-theme="dark"] .leaflet-bar a {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; animation: none !important; } }

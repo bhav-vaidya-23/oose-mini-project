@@ -1,0 +1,5 @@
+.risk-trend { padding: 20px 22px 8px; }
+.risk-trend__head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 3px; }
+.risk-trend__delta { font-size: .66rem; padding: 5px 8px; border-radius: 999px; font-weight: 800; }
+.risk-trend__delta.is-rising { color: var(--red); background: var(--red-soft); }
+.risk-trend__delta.is-falling { color: var(--green); background: var(--green-soft); }

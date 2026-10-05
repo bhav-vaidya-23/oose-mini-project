@@ -1,0 +1,8 @@
+.weather-trend { padding: 20px 22px 8px; }
+.weather-trend__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 3px; }
+.weather-trend__tabs { display: flex; gap: 2px; padding: 3px; background: #f4f7fa; border: 1px solid var(--border-soft); border-radius: 8px; }
+.weather-trend__tab { border: 0; background: transparent; color: var(--text-muted); font-size: .7rem; padding: 6px 10px; border-radius: 6px; }
+.weather-trend__tab.is-active { background: #fff; color: var(--text); box-shadow: 0 1px 4px rgba(20,50,80,.07); }
+.trend-tooltip { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; box-shadow: var(--shadow-soft); }
+.trend-tooltip__label { font-size: .67rem; color: var(--text-muted); }
+.trend-tooltip__value { font-size: .9rem; font-weight: 800; color: var(--text); }

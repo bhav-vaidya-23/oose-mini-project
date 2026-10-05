@@ -1,0 +1,5 @@
+.advisories { padding: 20px 22px; }
+.advisories__subtitle { margin: 5px 0 13px; color: var(--text-muted); font-size: .74rem; }
+.advisories__list { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; }
+.advisories__item { display: flex; align-items: flex-start; gap: 8px; color: var(--text-muted); font-size: .75rem; line-height: 1.45; }
+.advisories__icon { color: var(--green); flex-shrink: 0; margin-top: 1px; }

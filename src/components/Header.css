@@ -1,0 +1,18 @@
+.app-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.94); border-bottom: 1px solid var(--border); backdrop-filter: blur(14px); }
+.app-header__inner { max-width: var(--max-width); margin: 0 auto; min-height: 72px; padding: 10px 28px; display: flex; align-items: center; gap: 26px; }
+.app-header__brand { display: flex; align-items: center; gap: 12px; min-width: 340px; text-decoration: none; }
+.app-header__mark { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: var(--amber-soft); border: 1px solid #f7ddb9; }
+.sun-core { color: var(--amber); font-size: 21px; line-height: 1; }
+.app-header__title { font-size: 1.1rem; line-height: 1.1; }
+.app-header__subtitle { color: var(--text-muted); font-size: .72rem; margin-top: 4px; }
+.app-header__nav { display: flex; align-items: center; gap: 3px; flex: 1; justify-content: center; }
+.app-header__nav-item { color: var(--text-muted); text-decoration: none; font-size: .76rem; font-weight: 700; padding: 9px 10px; border-radius: 8px; white-space: nowrap; }
+.app-header__nav-item:hover, .app-header__nav-item.is-active { color: var(--text); background: #f2f6fa; }
+.app-header__meta { display: flex; align-items: center; gap: 7px; margin-left: auto; }
+.app-header__detail-pill { display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px; border: 1px solid var(--border); border-radius: 999px; background: #fff; color: var(--text-muted); font-size: .69rem; font-weight: 700; white-space: nowrap; }
+.app-header__icons { display: flex; gap: 6px; }
+.app-header__icon-btn { width: 34px; height: 34px; display: grid; place-items: center; background: #fff; border: 1px solid var(--border); border-radius: 9px; color: var(--text-muted); }
+.app-header__icon-btn:hover { color: var(--text); border-color: #b8c9d9; }
+.app-header__icon-btn[aria-pressed="true"] { color: var(--amber); border-color: var(--amber); background: var(--amber-soft); }
+@media (max-width: 1120px) { .app-header__brand { min-width: auto; } .app-header__nav { display: none; } }
+@media (max-width: 700px) { .app-header__inner { padding: 10px 14px; } .app-header__date { display: none; } .app-header__title { font-size: .96rem; } .app-header__subtitle { font-size: .66rem; } .app-header__detail-pill { display: none; } }

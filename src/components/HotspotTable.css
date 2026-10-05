@@ -1,0 +1,125 @@
+.hotspot {
+  padding: 20px 22px;
+}
+
+.hotspot__table-wrap {
+  overflow-x: auto;
+}
+
+.hotspot__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+.hotspot__table th {
+  text-align: left;
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  font-weight: 500;
+  padding: 0 10px 10px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.hotspot__table td {
+  padding: 11px 10px;
+  border-bottom: 1px solid var(--border-soft);
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.hotspot__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.hotspot__table tr.is-selected td {
+  background: var(--bg-panel-alt);
+}
+
+.hotspot__table tr.is-selected td:first-child {
+  border-left: 2px solid var(--cyan);
+}
+
+.hotspot__pin {
+  margin-left: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--cyan);
+  background: var(--cyan-soft);
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+.hotspot__bar-wrap {
+  position: relative;
+  width: 140px;
+  height: 7px;
+  background: var(--bg-raised);
+  border-radius: 999px;
+  overflow: visible;
+}
+
+.hotspot__bar {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.hotspot__bar--safe {
+  background: var(--green);
+}
+.hotspot__bar--low {
+  background: var(--cyan);
+}
+.hotspot__bar--moderate {
+  background: var(--amber);
+}
+.hotspot__bar--high {
+  background: var(--red);
+}
+.hotspot__bar--extreme {
+  background: var(--deep-red);
+}
+
+.hotspot__bar-value {
+  position: absolute;
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.hotspot__badge {
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.hotspot__badge--safe {
+  color: var(--green);
+  background: var(--green-soft);
+}
+.hotspot__badge--low {
+  color: var(--cyan);
+  background: var(--cyan-soft);
+}
+.hotspot__badge--moderate {
+  color: var(--amber);
+  background: var(--amber-soft);
+}
+.hotspot__badge--high {
+  color: var(--red);
+  background: var(--red-soft);
+}
+.hotspot__badge--extreme {
+  color: #f08499;
+  background: var(--deep-red-soft);
+}
+
+@media (max-width: 560px) {
+  .hotspot__bar-wrap {
+    width: 90px;
+  }
+}

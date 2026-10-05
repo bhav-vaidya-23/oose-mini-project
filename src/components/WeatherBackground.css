@@ -1,0 +1,91 @@
+.weather-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: #f3f7fb;
+}
+
+.weather-background--sunny {
+  background: linear-gradient(180deg, #e8f2fa, #f3f7fb 70%);
+}
+
+.weather-background--heatwave {
+  background:
+    radial-gradient(ellipse at 85% 8%, rgba(255, 216, 160, 0.3), transparent 48%),
+    linear-gradient(180deg, #f4eee5, #f3f7fb 72%);
+}
+
+.weather-background--cloudy {
+  background: linear-gradient(180deg, #e7edf2, #f3f7fb 75%);
+}
+
+.weather-background--rain {
+  background: linear-gradient(180deg, #e5edf3, #f3f7fb 75%);
+}
+
+.weather-background__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 700ms ease-in-out;
+  pointer-events: none;
+}
+
+.weather-background__video.is-active {
+  opacity: 0.3;
+}
+
+.weather-background__readability-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(243, 247, 251, 0.08) 0%,
+    rgba(243, 247, 251, 0.14) 48%,
+    rgba(243, 247, 251, 0.22) 100%
+  );
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .weather-background__video {
+    display: none;
+  }
+}
+
+.app[data-theme="dark"] .weather-background {
+  background: #101b28;
+}
+
+.app[data-theme="dark"] .weather-background--sunny {
+  background: linear-gradient(180deg, #172b3b, #101b28 78%);
+}
+
+.app[data-theme="dark"] .weather-background--heatwave {
+  background:
+    radial-gradient(ellipse at 85% 8%, rgba(214, 130, 54, 0.22), transparent 48%),
+    linear-gradient(180deg, #30271f, #101b28 78%);
+}
+
+.app[data-theme="dark"] .weather-background--cloudy {
+  background: linear-gradient(180deg, #202d39, #101b28 78%);
+}
+
+.app[data-theme="dark"] .weather-background--rain {
+  background: linear-gradient(180deg, #172633, #101b28 78%);
+}
+
+.app[data-theme="dark"] .weather-background__readability-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(8, 17, 27, 0.38) 0%,
+    rgba(8, 17, 27, 0.48) 48%,
+    rgba(8, 17, 27, 0.6) 100%
+  );
+}

@@ -1,0 +1,57 @@
+.risk-map {
+  padding: 20px 22px;
+}
+
+.risk-map__header {
+  margin-bottom: 12px;
+}
+
+.risk-map__subtitle {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  margin-top: 4px;
+}
+
+.risk-map__canvas {
+  height: 320px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+}
+
+.risk-map__legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.risk-map__legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.risk-map__legend i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #111d2b;
+  color: #eef1f0;
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+
+.leaflet-popup-tip {
+  background: #111d2b;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  color: #8fa0b3;
+}
